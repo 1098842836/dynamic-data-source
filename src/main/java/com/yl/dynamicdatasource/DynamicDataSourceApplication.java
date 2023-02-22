@@ -71,8 +71,6 @@ public class DynamicDataSourceApplication {
         System.out.println("返回上述方法的 MethodMetadata 集合:"+annotatedMethods.toString());
 
 
-
-
         AnnotationMetadata configAnnotationMetaData = AnnotationMetadata.introspect(DynamicDruidConfig.class);
         Set<MethodMetadata> annotatedMethods1 = configAnnotationMetaData.getAnnotatedMethods(Bean.class.getCanonicalName());
         System.out.println("返回DynamicDruidConfig上述方法的 MethodMetadata 集合:"+annotatedMethods1.toString());

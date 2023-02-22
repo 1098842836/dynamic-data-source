@@ -1,0 +1,6 @@
+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
+
+
+git remote set-url origin https://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@github.com/1098842836/dynamic-data-source.git/
+
+git remote add origin https://github.com/1098842836/dynamic-data-source.git

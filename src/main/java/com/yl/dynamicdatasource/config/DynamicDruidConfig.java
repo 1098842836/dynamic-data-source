@@ -5,8 +5,6 @@ import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 import com.alibaba.druid.util.JdbcConstants;
-import com.yl.dynamicdatasource.constant.DBConstants;
-import org.apache.tomcat.util.net.openssl.ciphers.Encryption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -63,7 +61,7 @@ public class DynamicDruidConfig {
         druidDataSource1.setDriverClassName(DATA_SOURCE_CLASS_NAME);
         druidDataSource1.setUrl("jdbc:postgresql://10.206.20.201:5432/respg");
         druidDataSource1.setUsername("suining");
-        druidDataSource1.setPassword((new Encryption().decrypt(DBConstants.DB_PASSWROD_AES_KEY, "e4d0320803acc8f20ba4878ecb5f31e0e4830ae83425dcd22604f831dbfbd07ee8c5ad87fa4ac4d21ad6")));
+        druidDataSource1.setPassword("111");
         druidDataSource1.setValidationQuery("SELECT 1");
         druidDataSource1.setDbType(JdbcConstants.POSTGRESQL);
         targetDataSources.put("suining", druidDataSource1.clone());
@@ -75,7 +73,7 @@ public class DynamicDruidConfig {
         druidDataSource2.setDriverClassName(DATA_SOURCE_CLASS_NAME);
         druidDataSource2.setUrl("jdbc:postgresql://10.206.20.201:5432/respg");
         druidDataSource2.setUsername("ziyang");
-        druidDataSource2.setPassword((new Encryption().decrypt(DBConstants.DB_PASSWROD_AES_KEY, "e4d0320803acc8f20ba4878ecb5f31e0e4830ae83425dcd22604f831dbfbd07ee8c5ad87fa4ac4d21ad6")));
+        druidDataSource2.setPassword("2222");
         druidDataSource2.setValidationQuery("SELECT 1");
         druidDataSource2.setDbType(JdbcConstants.POSTGRESQL);
         targetDataSources.put("ziyang", druidDataSource2.clone());
